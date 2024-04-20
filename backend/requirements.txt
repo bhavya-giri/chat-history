@@ -1,0 +1,15 @@
+# LLama-Index 
+llama-index-embeddings-openai==0.1.8
+llama-index-llms-openai==0.1.7
+llama-index-vector-stores-lancedb==0.1.3
+llama-index-core==0.10.16.post1
+llama-index==0.10.16
+
+#Backend
+fastapi==0.110.0
+uvicorn==0.27.1
+python-dotenv==1.0.1
+pydantic-settings==2.2.1
+SQLAlchemy==2.0.25
+psycopg2-binary==2.9.9
+loguru==0.7.2
