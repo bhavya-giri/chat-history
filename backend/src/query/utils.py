@@ -2,7 +2,7 @@ from ..config import settings
 from llama_index.core import StorageContext,VectorStoreIndex
 from llama_index.embeddings.openai import OpenAIEmbedding
 from llama_index.core import Settings
-from llama_index.vector_stores.lancedb import LanceDBVectorStore
+from llama_index.vector_stores.milvus import MilvusVectorStore
 from llama_index.llms.openai import OpenAI
 from llama_index.core.base.llms.types import ChatMessage,MessageRole
 from ..conversation.crud import create_conversation,create_message,fetch_messages
@@ -12,7 +12,14 @@ from loguru import logger
 
 Settings.embed_model = OpenAIEmbedding(model=settings.EMBEDDING_MODEL ,api_key=settings.OPENAI_KEY)
 Settings.llm = OpenAI(temperature=0.1,api_key= settings.OPENAI_KEY)
-vector_store = LanceDBVectorStore(uri=settings.VECTOR_URI)
+vector_store = MilvusVectorStore(
+            collection_name=f"harry_potter_plots",
+            uri=settings.MILVUS_URI,
+            overwrite=False,
+            token=settings.MILVUS_TOKEN,
+            similarity_metric="L2",
+            dim=1536,
+        )
 
 def get_chat_history(
     chat_messages:List[dict],

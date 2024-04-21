@@ -11,6 +11,9 @@ class Settings(BaseSettings):
   EMBEDDING_MODEL: str
   LLM : str
   VECTOR_URI: str
+  MILVUS_TOKEN: str
+  MILVUS_URI:str
+
 
 # global instance
 settings = Settings()
