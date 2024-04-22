@@ -1,7 +1,7 @@
 # chat-history
 Storing chat history of your RAG Pipelines like ChatGPT, also accessing previous context in conversation.
 
-This project is based on the blog post 
+This project is based on the blog post ["Storing Chat History like ChatGPT for your RAG Pipeline with previous context - LlamaIndex, FastAPI"](https://medium.com/@bhavyagiri/storing-chat-history-like-chatgpt-for-your-rag-pipeline-with-previous-context-llamaindex-fastapi-ca775a325473) written by me.
 
 ## Run Locally
 
