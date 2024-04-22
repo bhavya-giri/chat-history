@@ -1,7 +1,11 @@
 # chat-history
-Storing chat history of your RAG Pipelines like ChatGPT, also accessing previous context in conversation
+Storing chat history of your RAG Pipelines like ChatGPT, also accessing previous context in conversation.
 
-## Run Backend Locally
+This project is based on the blog post 
+
+## Run Locally
+
+### Backend
 
 Go to the backend directory
 
@@ -29,5 +33,29 @@ Start the server
 ```bash
   uvicorn src.main:app --reload
 ```
+
+### Frontend
+
+Go to the frontend directory
+
+```bash
+  cd frontend
+```
+
+Install dependencies
+
+```bash
+  npm install
+```
+
+Start the app
+
+```bash
+  npm run dev
+```
+
+Then head to this http://localhost:5173/chat
+
+
 
 
