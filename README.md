@@ -54,7 +54,7 @@ Start the app
   npm run dev
 ```
 
-Then head to this http://localhost:5173/chat
+Then head to http://localhost:5173/chat
 
 
 
